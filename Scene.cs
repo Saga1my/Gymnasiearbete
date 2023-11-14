@@ -65,15 +65,16 @@ public static class SceneManager
         List<Thing> things2 = new()
         {
             new NPC (),
-            new AnimatedSprite (new List<Texture2D>{Raylib.LoadTexture("Pixel/CounterBar.png")}, new Rectangle(0,0,1560,950)),
             new Collider(new Rectangle(-20,0,10,1000), player), //wall_left
             new Collider(new Rectangle(1520,0,10,1000), player), //wall_right
             new Collider(new Rectangle(0,870,505,40), player), //wall_down
             new Collider(new Rectangle(430,300,600,215), player), //bar
             new Collider(new Rectangle(920,870,500,40), player), //wall_down_right
             new Collider(new Rectangle(0,0,1500,70), player), //wall_top
+            new AnimatedSprite (new List<Texture2D>{Raylib.LoadTexture("Pixel/CounterBar.png")}, new Rectangle(0,0,1560,950)),
             text,
             minigame,
+            new Ending(),
             
 
 

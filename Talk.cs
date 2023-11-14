@@ -150,39 +150,39 @@ public class Text : Thing
             me = true;
         }
 
-        if (CurrentChat>=4&&minigame.played==true){
+        if (CurrentChat>=3&&stage==1){
 
             still = true;
 
             
             
-                if (evilBox.y<=600){
-                    evilBox.y+=10;
-                }
+            if (evilBox.y<=600){
+                evilBox.y+=10;
+            }
 
-                else{left=true;}
-                
+            else{left=true;}
             
-                if (CurrentChat>=4&&minigame.played==true&&left){
-                
-                    if (evilBox.x>=670){
-                        evilBox.x-=10;
-                    }
-                    
-                    if (evilBox.x<=675){
-                        if(evilBox.y<=930)
-                        evilBox.y+=10;
-                        stage=2;
-                    }
+        
+            if (CurrentChat>=3&&stage==1&&left){
+            
+                if (evilBox.x>=670){
+                    evilBox.x-=10;
                 }
                 
-            
+                if (evilBox.x<=675){
+                    if(evilBox.y<=930)
+                    evilBox.y+=10;
+                    
+                }
+            }
+                  
+        }
+
+        if(evilBox.y>=910&&minigame.played){
+            stage=2;
         }
     
-        if(stage==2){
-            evilBox.y=600;
-        }
-        
+    
         
     }
     public override void Draw()
@@ -245,10 +245,10 @@ public class Text : Thing
 
         if(stage==1){if(evilAppeared)  {  Raylib.DrawTexturePro(EvilGuyTexture, new Rectangle(0, 0, EvilGuyTexture.width, EvilGuyTexture.height), evilBox, Vector2.Zero, 0f, Color.WHITE); }}
 
-        if(stage==2){
-            Raylib.DrawTexturePro(EvilGuyTexture, new Rectangle(0, 0, EvilGuyTexture.width, EvilGuyTexture.height), evilBox, Vector2.Zero, 0f, Color.WHITE);
+        // if(stage==2){
+        //     Raylib.DrawTexturePro(EvilGuyTexture, new Rectangle(0, 0, EvilGuyTexture.width, EvilGuyTexture.height), evilBox, Vector2.Zero, 0f, Color.WHITE);
 
-        }
+        // }
     
     
     }

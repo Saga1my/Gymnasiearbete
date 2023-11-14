@@ -4,11 +4,11 @@ using System.Numerics;
 
 namespace Gymnasiearbete;
 
-public class NPC : Thing
+public class Ending : Thing
 {
     
 
-    Rectangle MySpriteBox;
+    public Rectangle MySpriteBox { get; set; }
 
     
 
@@ -41,7 +41,7 @@ public class NPC : Thing
     }
     public override void Draw()
     {
-        Raylib.DrawTexturePro(Alex[0], new Rectangle(0, 0, Alex[0].width, Alex[0].height), MySpriteBox, Vector2.Zero, 0f, Color.WHITE);
+        //Raylib.DrawTexturePro(Alex[0], new Rectangle(0, 0, Alex[0].width, Alex[0].height), MySpriteBox, Vector2.Zero, 0f, Color.WHITE);
     }
 
     
