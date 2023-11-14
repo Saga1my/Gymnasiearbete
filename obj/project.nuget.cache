@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "1Cxwb4YFGjmfO6JUDSmkfDfqzX6mLdbCZCdThunIWpTr4mSUNwFgHMaTuIeqS+5I5y16TrRwrObgRP31a4ncXQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\saga.palm1\\Documents\\Gymnasiearbete\\Gymnasiearbete\\Gymnasiearbete.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\saga.palm1\\.nuget\\packages\\raylib-cs\\4.5.0.4\\raylib-cs.4.5.0.4.nupkg.sha512",
+    "C:\\Users\\saga.palm1\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\saga.palm1\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.21\\microsoft.netcore.app.ref.6.0.21.nupkg.sha512",
+    "C:\\Users\\saga.palm1\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.21\\microsoft.windowsdesktop.app.ref.6.0.21.nupkg.sha512",
+    "C:\\Users\\saga.palm1\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.21\\microsoft.aspnetcore.app.ref.6.0.21.nupkg.sha512",
+    "C:\\Users\\saga.palm1\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.21\\microsoft.netcore.app.host.win-x64.6.0.21.nupkg.sha512"
+  ],
+  "logs": []
+}
