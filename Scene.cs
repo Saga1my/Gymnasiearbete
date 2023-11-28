@@ -14,7 +14,7 @@ public abstract class Thing
 }
 public class Scene
 {
-    
+
     public Scene(Texture2D backgroundTexture, List<Thing> allThingsInScene)
     {
         this.backgroundTexture = backgroundTexture;
@@ -25,27 +25,28 @@ public class Scene
 
     public List<Thing> allThingsInScene;
 
-   
+
 }
 
 
 public static class SceneManager
 {
     public static bool isAlex = true;
+    public static bool hasbeenadded = false;
     public static Player player = new();
     static int currentSceneIndex = 0;
 
     static List<Scene> scenes = new();
 
+    static Text text = new();
 
+    static List<Thing> things;
 
 
     public static void Start()
     {
-        
-        Text text = new();
-        List<Thing> things = new()
-        
+
+        things = new()
         {
             new AnimatedSprite(new List<Texture2D>{ Raylib.LoadTexture("Pixel/ShipOnFire1.png"), Raylib.LoadTexture("Pixel/ShipOnFire2.png"), Raylib.LoadTexture("Pixel/ShipOnFire3.png"),} , new Rectangle(10, 200, 650, 650)),
             new Collider(new Rectangle(130,470,400,130), player), //ship
@@ -56,8 +57,8 @@ public static class SceneManager
             new Collider(new Rectangle(0,0,865,300), player), //berg 1
             new Collider(new Rectangle(900,0,200,80), player), //skylt
             new Collider(new Rectangle(1100,0,400,300), player), //berg 2
-            text,
-            
+            //text,
+
             new Teleporter(new Rectangle(900,100,200,200), 1, new Vector2(), player)
         };
 
@@ -74,16 +75,20 @@ public static class SceneManager
             new AnimatedSprite (new List<Texture2D>{Raylib.LoadTexture("Pixel/CounterBar.png")}, new Rectangle(0,0,1560,950)),
             text,
             minigame,
-            new Ending(),
-            
+
+
 
 
             new Teleporter(new Rectangle(505,850,400,200), 0, new Vector2(), player)
         };
-        text.minigame=minigame;
+
+
+
+        text.minigame = minigame;
         Scene startScene = new(Raylib.LoadTexture("Pixel/SpawnPoint.png"), things);
         scenes.Add(startScene);
-        
+
+
 
         //barScene
         Scene barScene = new(Raylib.LoadTexture("Pixel/BarBackground.png"), things2);
@@ -92,6 +97,16 @@ public static class SceneManager
 
     public static void Update()
     {
+        if (!hasbeenadded)
+        {
+            if (text.stage == 2)
+            {
+                things.Add(new Ending());
+                hasbeenadded=true;
+                
+            }
+
+        }
         player.Update();
 
         foreach (Thing thing in scenes[currentSceneIndex].allThingsInScene)
@@ -113,10 +128,11 @@ public static class SceneManager
         {
             thing.Draw();
         }
-        
-        
-        if(Text.Talking==false){
-        
+
+
+        if (Text.Talking  == false)
+        {
+
             player.Draw();
         }
 

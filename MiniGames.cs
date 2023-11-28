@@ -14,11 +14,14 @@ public class Minigame : Thing
     public bool won = false;
     public bool played = false;
     int tasksDone = 0;
+
+    int max = 1;
     bool red = false;
     int time = 0;
     Text text;
     Texture2D bil = Raylib.LoadTexture("Pixel/car.png");
     Texture2D road = Raylib.LoadTexture("Pixel/road.png");
+    Texture2D wheel = Raylib.LoadTexture("Pixel/wheels.png");
 
 
 
@@ -97,12 +100,12 @@ public class Minigame : Thing
                 
                 if (Raylib.CheckCollisionPointRec(spriteCenter, spriteBox))
                 {
-                    if (i == 1 && tasksDone < 4)
+                    if (i == 1 && tasksDone < max)
                     {
                         tasksDone++;
                     }
 
-                    else if (tasksDone == 4)
+                    else if (tasksDone == max)
                     {
                         text.isMinigameActive = false;
                         won = true;
@@ -110,7 +113,7 @@ public class Minigame : Thing
                     }
 
 
-                    else if (i == 0||i == 2||i == 3 && tasksDone < 4)
+                    else if (i == 0||i == 2||i == 3 && tasksDone < max)
                     {
                         red = true;
                         won = false;
@@ -144,6 +147,7 @@ public class Minigame : Thing
     {
         if (text.isMinigameActive)
         {
+            Raylib.DrawTexturePro(wheel, new Rectangle(0, 0, bil.width, bil.height), spriteBox, Vector2.Zero, 0f, Color.WHITE);
             Raylib.DrawTexturePro(road, new Rectangle(0, 0, 300, 180), new Rectangle(0, 0, Raylib.GetScreenWidth(), Raylib.GetScreenHeight()), Vector2.Zero, 0, Color.WHITE);
             for (int i = 0; i < fallingSprites.Length; i++)
             {
