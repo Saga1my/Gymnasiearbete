@@ -15,7 +15,7 @@ public class Minigame : Thing
     public bool played = false;
     int tasksDone = 0;
 
-    int max = 1;
+    int max = 4;
     bool red = false;
     int time = 0;
     Text text;

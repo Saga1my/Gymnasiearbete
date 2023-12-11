@@ -70,11 +70,11 @@ public class Text : Thing
     List<string> Chat1 = new List<string>{
             "Bartender:  Hello there! I'm Tom! Welcome to my bar!",
             "You:  Hello! Why is it so empty?",
-            "Tom:  I have used all my money to feed my little sisters so i have not had any money over to furnish the place sadly...",
+            "Tom:  I have used all my money to feed my little sisters so i have not had any money over to furnish the place sadly... Although i was just about meet with this man who might be able to help me! Ive been waiting to meet with him for months now, and now he finally had a few minutues free! This place is finally gonna look the way i always imagined it would..",
             "You:  I meant empty as in lack of people",
-            "Tom:  Oh! Thats awkard hehe. Thats probably because it is only 9 in the morning here, im guessing youre not from this planet?",
+            "Tom:  Oh! Thats awkward hehe. Thats probably because it is only 9 in the morning here, im guessing youre not from this planet?",
             "You:  No..My ship crashed and im trying to find a way to get home",
-            "Tom:  That's tough luck. I'm really sorry to hear that. But, I might be able to help you out, although it won't be easy. I have a ship, but i need batteries. Would you be willing to look for them for me? I need 5!"
+            "Tom:  That's tough luck. I'm really sorry to hear that...tell you what, you get me five batteries and you can take my ship. Dont worry about the furniture, ill be fine without it."
 
 
         };
@@ -138,7 +138,11 @@ public class Text : Thing
 
         }
 
-        if (CurrentChat > Chat1.Count)
+        if (CurrentChat > Chat1.Count&&minigame.played==false)
+        {
+            Talking = false;
+        }
+        if (CurrentChat > Chat2.Count&&minigame.played==true)
         {
             Talking = false;
         }
@@ -219,8 +223,8 @@ public class Text : Thing
 
             if (choice)
             {
-                Raylib.DrawText("[ESC] Goodbye", 1100, 740, 25, Color.BLACK);
-                Raylib.DrawText("[1] yes", 170, 740, 25, Color.BLACK);
+                Raylib.DrawText("[ESC] Leave", 1100, 740, 25, Color.BLACK);
+                Raylib.DrawText("[1] Look for batteries", 170, 740, 25, Color.BLACK);
             }
 
 
