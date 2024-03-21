@@ -22,7 +22,7 @@ public class NPC : Thing
         Raylib.LoadTexture("Pixel/Alex_CloseupHappy.png"),
 
     };
-    // List<Texture2D> Tom = new List<Texture2D>
+    // List<Texture2D> Alex = new List<Texture2D>
     // {
     //     Raylib.LoadTexture("Pixel/Tom.png"),
     //     Raylib.LoadTexture("Pixel/Tom_Closeup.png"),

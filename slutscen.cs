@@ -46,15 +46,15 @@ public class Ending : Thing
     Texture2D family = Raylib.LoadTexture("Pixel/Family.png");
     Texture2D shot = Raylib.LoadTexture("Pixel/shot.png");
     Texture2D familydead = Raylib.LoadTexture("Pixel/deadfamily.png");
-    //Texture2D tom = Raylib.LoadTexture("Pixel/Tom.png");
-    //Texture2D tomdead = Raylib.LoadTexture("Pixel/Tomdead.png");
+    Texture2D tom = Raylib.LoadTexture("Pixel/Tom.png");
+    Texture2D tomdead = Raylib.LoadTexture("Pixel/Tomdead.png");
 
     Texture2D evil = Raylib.LoadTexture("Pixel/evil.png");
     Texture2D evilshot = Raylib.LoadTexture("Pixel/evilshot.png");
     Texture2D Me = Raylib.LoadTexture("Pixel/Idle_Main.png");
 
-    Texture2D tom = Raylib.LoadTexture("Pixel/Alex.png");
-    Texture2D tomdead = Raylib.LoadTexture("Pixel/alexdead.png");
+    // Texture2D tom = Raylib.LoadTexture("Pixel/Alex.png");
+    // Texture2D tomdead = Raylib.LoadTexture("Pixel/alexdead.png");
     Texture2D DEADTOM1 = Raylib.LoadTexture("Pixel/cutscene1.png");
     Texture2D winter = Raylib.LoadTexture("Pixel/cutscene3.png");
     Texture2D end = Raylib.LoadTexture("Pixel/cutscene4.png");
